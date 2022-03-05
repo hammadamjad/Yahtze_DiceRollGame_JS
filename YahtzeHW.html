@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<!-- HTML for Yahtzee Lite -->
+
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>Yahtzee Lite</title>
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <script src="YahtzeHW.js"></script>
+</head>
+
+<body>
+   <div class="intro-des">
+      <p> Welcome to Yahtzee Lite!</p>
+      <h1>
+         <i>Briefly describe game/rules here. Tell the player what to do first.</i>
+      </h1>
+      <ul>
+         <li>Hit Play button to start the game.</li>
+         <li>Player have 10 rounds to roll the dice.</li>
+         <li>The straight 1,2,3,4,5 or 2,3,4,5,6 is the winner.</li>
+         <li> <strong><i>'Keep'</i></strong> button will keep the specific dice and not change to the further rounds.</li>
+      </ul>
+   </div>
+
+   <form class="game-buttons" action="#">
+      <input class="Hover" id="playButton" type="button" value="Play" onclick="startGame()">
+      <input  id="rollButton" type="button" value="Roll" disabled>
+   </form>
+
+   <audio id="diceRollingAudio" preload="auto">
+      <source src="Shake And Roll Dice.mp3" type="audio/mpeg">
+      Browser does not support audio tag
+   </audio>
+
+   <div id="messages">
+
+   </div>
+   <div id="gameOverMessage">
+
+   </div>
+
+   <p class="die-images">
+      <img id="die1" src="blank.png" alt="die 1 image">
+      <img id="die2" src="blank.png" alt="die 2 image">
+      <img id="die3" src="blank.png" alt="die 3 image">
+      <img id="die4" src="blank.png" alt="die 4 image">
+      <img id="die5" src="blank.png" alt="die 5 image">
+   </p>
+
+   <form class="keeper-buttons" action="#">
+      <input class="Hover" id="keeper1" type="button" value="keep?">
+      <input class="Hover" id="keeper2" type="button" value="keep?">
+      <input class="Hover" id="keeper3" type="button" value="keep?">
+      <input class="Hover" id="keeper4" type="button" value="keep?">
+      <input class="Hover" id="keeper5" type="button" value="keep?">
+   </form>
+
+   <br><br>
+
+   <div class="keeper-des">
+      Describe the keepers buttons here
+      <ul class="keeper-selected">
+         <li>There are 5 <i><strong>keep</strong></i> buttons.</li>
+         <li>Whenever a <i><strong>keep</strong></i> button is pressed, 
+            the text changes to <i><strong>keeper</strong></i>.</li>
+         <li>The dice is kept till the end of the game and remaining are rolled.</li>
+         
+      </ul>
+   </div>
+
+   
+
+   <br><br>
+   <div class="yourname">
+      Khalid Al Rubaii
+   </div>
+</body>
+
+</html>
